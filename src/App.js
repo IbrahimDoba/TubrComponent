@@ -116,7 +116,7 @@ const DescP = styled.span`
   font-size: 1.2vw;
   text-align: center;
   padding: 5px;
-  font-weight: 400;
+  font-weight: 300;
  
 `;
 
