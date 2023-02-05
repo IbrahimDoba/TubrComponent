@@ -44,15 +44,19 @@ const Left = styled.div`
   height: 100%;
   text-align: center;
 
-  animation: box1-animation 2s ease-in-out;
+  animation: box1-animation 5s ease-in-out;
   @keyframes box1-animation {
     0% {
-      transform: translateX(-30%);
+      transform: translateX(-200%);
     }
 
-    100% {
+    50% {
       transform: translateX(0);
     }
+    100% {
+      transform: translateX(-200%);
+    }
+   
   }
 `;
 const Right = styled.div`
@@ -61,14 +65,17 @@ const Right = styled.div`
   flex: 1;
   text-align: center;
 
-  animation: box2-animation 2s ease-in-out;
+  animation: box2-animation 5s ease-in-out;
   @keyframes box2-animation {
     0% {
-      transform: translateX(400%);
+      transform: translateX(200%);
     }
 
-    100% {
+    50% {
       transform: translateX(0);
+    }
+    100% {
+      transform: translateX(200%);
     }
   }
 `;
@@ -79,7 +86,7 @@ const SlideShow = ({ slides }) => {
   useEffect(() => {
     const id = setInterval(() => {
       setCurrentSlide((currentSlide + 1) % 3);
-    }, 3000);
+    }, 5000);
     return () => clearInterval(id);
   }, [currentSlide]);
   console.log(slides);
